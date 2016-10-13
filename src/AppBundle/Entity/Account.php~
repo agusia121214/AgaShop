@@ -1,0 +1,54 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Account
+ *
+ * @ORM\Table(name="account")
+ * @ORM\Entity
+ */
+class Account
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="login", type="string", length=50, nullable=false)
+     */
+    private $login;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=50, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=32, nullable=false)
+     */
+    private $password;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="is_admin", type="boolean", nullable=false)
+     */
+    private $isAdmin;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
+}
+

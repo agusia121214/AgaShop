@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+<div class="container">
+    <div class="login">
+
+        <form class="center-block"  action="{{ path( 'login' ) }}" method="post" >
+            <div class="login-do" style="width: 500px;height:500px;margin: auto" >
+                <div class="login-mail"  >
+                    <input name="email" type="text" placeholder="Email" required=""  >
+                    <i  class="glyphicon glyphicon-envelope"></i>
+                </div>
+                <div class="login-mail">
+                    <input name="password" type="password" placeholder="Password" required="">
+                    <i class="glyphicon glyphicon-lock"></i>
+                </div>
+
+                <label class="hvr-skew-backward">
+                    <input type="submit" value="login">
+                </label>
+            </div>
+            <div class="clearfix"> </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
